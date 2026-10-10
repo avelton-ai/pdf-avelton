@@ -4,7 +4,8 @@ use std::time::Duration;
 
 use pdfcraft_ui_egui::updates::{RELEASES_PAGE, Release};
 
-const LATEST: &str = "https://api.github.com/repos/storytold/pdfcraft/releases/latest";
+// The release list includes the fork's published alpha releases.
+const LATEST: &str = "https://api.github.com/repos/avelton-ai/pdf-avelton/releases?per_page=1";
 
 /// The latest release. The answer is untrusted: its size is capped, and only a page under
 /// [`RELEASES_PAGE`] is ever offered for download (anything else falls back to that list).
@@ -36,6 +37,7 @@ fn os_roots() -> Result<ureq::tls::RootCerts, String> {
 
 fn parse(body: &str) -> Result<Release, String> {
     let v: serde_json::Value = serde_json::from_str(body).map_err(|e| format!("unreadable answer ({e})"))?;
+    let v = if let Some(releases) = v.as_array() { releases.first().ok_or("no release found")? } else { &v };
     let version = v["tag_name"].as_str().filter(|t| !t.is_empty() && t.len() <= 64).ok_or("no release found")?.to_string();
     let url = v["html_url"]
         .as_str()
@@ -59,6 +61,15 @@ mod tests {
         }
         assert!(parse(r#"{"message":"Not Found"}"#).is_err());
         assert!(parse("<html>").is_err());
+    }
+
+    #[test]
+    fn the_published_release_list_includes_avelton_alpha() {
+        let r = parse(r#"[{"tag_name":"v0.5.0-avelton.1","html_url":"https://github.com/avelton-ai/pdf-avelton/releases/tag/v0.5.0-avelton.1"}]"#)
+            .unwrap();
+        assert_eq!(r.version, "v0.5.0-avelton.1");
+        assert_eq!(r.url, "https://github.com/avelton-ai/pdf-avelton/releases/tag/v0.5.0-avelton.1");
+        assert!(parse("[]").is_err());
     }
 
     /// Live: asks GitHub over TLS with the OS's roots (`cargo test -p pdfcraft -- --ignored`).
