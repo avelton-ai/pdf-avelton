@@ -106,7 +106,7 @@ Assert-Equal $scope[0] '1' 'Per-machine shortcut scope'
 # Image context menu opens the DPI chooser; the app component owns every registry row so
 # uninstall removes it. No image default association is changed.
 foreach ($ext in @('png', 'jpg', 'jpeg', 'tif', 'tiff', 'gif', 'bmp', 'jp2', 'j2k', 'jpx')) {
-  $key = 'Software\Classes\SystemFileAssociations\.' + $ext + '\shell\PDF Avelton.CreatePdf'
+  $key = 'Software\Classes\SystemFileAssociations\.' + $ext + '\shell\AveltonPdf.CreatePdf'
   $menu = Read-Row ('SELECT `Value`, `Component_`, `Root` FROM `Registry` WHERE `Key` = ''' + $key + ''' AND `Name` IS NULL') 3
   Assert-Equal $menu[0] 'Create PDF with PDF Avelton…' "$ext context menu label"
   Assert-Equal $menu[1] 'PdfcraftApp' "$ext context menu component"
