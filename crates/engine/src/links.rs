@@ -3,7 +3,7 @@
 
 use icu_properties::props::Script;
 
-/// The app's name in Avelton URLs (`getartcraft.com/apps/{APP}`, `github.com/storytold/{APP}`).
+/// The app's name in Avelton URLs (`avelton.online/apps/{APP}`, `github.com/storytold/{APP}`).
 pub const APP: &str = "pdfcraft";
 
 pub const DISCORD: &str = "https://github.com/avelton-ai/pdf-avelton/issues";
@@ -341,8 +341,8 @@ fn mixes_scripts(label: &str) -> bool {
 mod tests {
     #[test]
     fn urls_follow_the_artcraft_scheme() {
-        assert_eq!(super::APP_PAGE, format!("{}/apps/{}", super::WEBSITE, super::APP));
-        assert_eq!(super::GITHUB, format!("https://github.com/storytold/{}", super::APP));
+        assert_eq!(super::APP_PAGE, "https://pdf.avelton.online");
+        assert_eq!(super::GITHUB, "https://github.com/avelton-ai/pdf-avelton");
         for l in super::LINKS {
             assert!(l.url.starts_with("https://"), "{}", l.url);
             assert!(crate::commands::command(l.command).is_some(), "{} is a registered command", l.command);

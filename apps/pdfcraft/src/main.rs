@@ -141,7 +141,7 @@ fn main() -> eframe::Result {
     while let Some(a) = args.next() {
         match a.as_str() {
             "--version" => {
-                println!("pdfcraft {}", env!("CARGO_PKG_VERSION"));
+                println!("pdf-avelton {}", env!("CARGO_PKG_VERSION"));
                 return Ok(());
             }
             "--control" => control_file = args.next(),

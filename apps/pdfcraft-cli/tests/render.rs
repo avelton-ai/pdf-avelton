@@ -7,7 +7,7 @@ use std::process::{Command, Output};
 const BIN: &str = env!("CARGO_BIN_EXE_pdfcraft-cli");
 
 fn tmp(test: &str, name: &str) -> PathBuf {
-    let d = std::env::temp_dir().join(format!("pdfcraft-cli-render-{test}-{}", std::process::id()));
+    let d = std::env::temp_dir().join(format!("pdf-avelton-cli-render-{test}-{}", std::process::id()));
     std::fs::create_dir_all(&d).unwrap();
     d.join(name)
 }
