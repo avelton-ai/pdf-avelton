@@ -329,7 +329,7 @@ pub const COMMANDS: &[CommandSpec] = &[
     c("page.split", "Split document…", PAGES, None, Assembly, "scissors"),
     c("page.number", "Number pages…", PAGES, None, Assembly, "hash"),
     c("help.shortcuts", "Keyboard shortcuts", HELP, None, Nothing, "circle-help"),
-    c("help.discord", "Join the Avelton Discord", HELP, None, Nothing, "messages-square"),
+    c("help.discord", "Avelton support", HELP, None, Nothing, "messages-square"),
     c("help.app_page", "PDF Avelton web page", HELP, None, Nothing, "globe"),
     c("help.github", "PDF Avelton on GitHub", HELP, None, Nothing, "code-xml"),
     c("help.website", "Avelton website", HELP, None, Nothing, "external-link"),

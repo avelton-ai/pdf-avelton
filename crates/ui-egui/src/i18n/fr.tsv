@@ -61,7 +61,7 @@
 	Flatten Fill & Sign when saving	Aplatir Remplir et signer à l'enregistrement
 	Text, marks and signatures become part of the page. Other comments stay editable.	Le texte, les marques et les signatures deviennent partie de la page. Les autres commentaires restent modifiables.
 	OK	OK
-	Avelton support	Rejoindre notre Discord
+	Avelton support	Assistance Avelton
 	Close	Fermer
 	Next / previous match	Correspondance suivante / précédente
 	Copy selected text	Copier le texte sélectionné
@@ -124,7 +124,7 @@
 	Welcome to PDF Avelton	Bienvenue dans PDF Avelton
 	An open-source PDF workbench — local, private, and scriptable.	Un atelier PDF open source — local, privé et automatisable.
 	Join the Avelton community	Rejoindre la communauté Avelton
-	Get help, share feedback and follow development on Discord.	Obtenez de l'aide, partagez vos retours et suivez le développement sur Discord.
+	Avelton support on GitHub.	Assistance Avelton sur GitHub.
 	Recommended tools	Outils recommandés
 	Use now	Utiliser
 	Open file	Ouvrir un fichier
@@ -264,7 +264,6 @@
 	Split document…	Fractionner le document…
 	Number pages…	Numéroter les pages…
 	Keyboard shortcuts	Raccourcis clavier
-	Avelton support	Rejoindre le Discord Avelton
 	PDF Avelton web page	Page web de PDF Avelton
 	PDF Avelton on GitHub	PDF Avelton sur GitHub
 	Avelton website	Site web d'Avelton

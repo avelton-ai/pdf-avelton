@@ -88,7 +88,7 @@
 	Side panels	サイドパネル
 	Enable Acrobat JavaScript	Acrobat JavaScript を有効にする
 	OK	OK
-	Avelton support	Discord に参加
+	Avelton support	Avelton サポート
 	Close	閉じる
 	Next / previous match	次／前の検索結果
 	Copy selected text	選択したテキストをコピー
@@ -151,7 +151,7 @@
 	Welcome to PDF Avelton	PDF Avelton へようこそ
 	An open-source PDF workbench — local, private, and scriptable.	ローカルで処理し、プライバシーを守る、スクリプト対応のオープンソース PDF ツール。
 	Join the Avelton community	Avelton コミュニティに参加
-	Get help, share feedback and follow development on Discord.	Discord で質問やフィードバックを共有し、開発の進捗を確認できます。
+	Avelton support on GitHub.	GitHub の Avelton サポート。
 	Recommended tools	おすすめのツール
 	Use now	使用する
 	Open file	ファイルを開く
@@ -291,7 +291,6 @@
 	Split document…	文書を分割…
 	Number pages…	ページ番号を設定…
 	Keyboard shortcuts	キーボードショートカット
-	Avelton support	Avelton の Discord に参加
 	PDF Avelton web page	PDF Avelton の Web 版
 	PDF Avelton on GitHub	GitHub の PDF Avelton
 	Avelton website	Avelton のウェブサイト
