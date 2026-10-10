@@ -1,12 +1,12 @@
-# Releasing PdfCraft
+# Releasing PDF Avelton
 
 Every push to the `release` branch runs `.github/workflows/release.yml`. It builds installers for
 macOS, Windows, Linux, FreeBSD and the web, signs the ones it has certificates for, and creates or
-updates a **draft** GitHub Release named `PdfCraft v<version>`. Nobody sees a draft until a
+updates a **draft** GitHub Release named `PDF Avelton v<version>`. Nobody sees a draft until a
 maintainer publishes it.
 
-The pipeline was ported from PhotoCraft's. User-facing names say **PdfCraft**; files, binaries and
-ids stay lowercase (`pdfcraft-<version>-<platform>-<arch>.<ext>`, `ai.storyteller.pdfcraft`).
+The pipeline was ported from PhotoCraft's. User-facing names say **PDF Avelton**; files, binaries and
+ids stay lowercase (`pdfcraft-<version>-<platform>-<arch>.<ext>`, `online.avelton.pdf`).
 
 ## Cutting a release
 
@@ -18,10 +18,10 @@ ids stay lowercase (`pdfcraft-<version>-<platform>-<arch>.<ext>`, `ai.storytelle
    cargo xtask version set 0.3.0       # or 0.3.0-rc.1; updates Cargo.toml and Cargo.lock
    ```
 
-   Commit the change through the normal review flow (see the `Release: PdfCraft v0.2.1` PR).
+   Commit the change through the normal review flow (see the `Release: PDF Avelton v0.2.1` PR).
 2. **Merge `main` into `release`** (or fast-forward it) and push. The workflow starts by itself.
 3. **Wait for the draft.** When every job has finished (notarization is the slow part), the
-   Releases page has a draft `PdfCraft v0.3.0` targeting the pushed commit, with every artifact
+   Releases page has a draft `PDF Avelton v0.3.0` targeting the pushed commit, with every artifact
    and `SHA256SUMS.txt`. The notes are generated from the merged PRs.
 4. **Check it.** Download an installer or two and read the job summaries. A `::warning::` there
    means a signing secret was missing and that artifact is unsigned.
@@ -73,14 +73,14 @@ deliberately.
 fetch every `kind = "model"` file in `ATTRIBUTION.toml` (verified by SHA-256) with its licence text
 and an `ATTRIBUTION.txt`, straight into the package, so packaging needs the network. They go where
 `pdfcraft_ocr::Models::dirs_beside_exe` looks: `models\` beside `pdfcraft.exe` (MSI, portable zip),
-`PdfCraft.app/Contents/Resources/models` (macOS), and `share/pdfcraft/models` beside `bin/`
+`PDF Avelton.app/Contents/Resources/models` (macOS), and `share/pdfcraft/models` beside `bin/`
 (deb, rpm, tar.gz, AppImage, Flatpak, FreeBSD). The web build doesn't include them yet.
 
 ### macOS
 
 `packaging/macos/package.sh` builds both architectures, joins them with `lipo`, and assembles
-`PdfCraft.app` from `Info.plist.in` (bundle id `ai.storyteller.pdfcraft`, macOS 11+, PDF declared
-as a document type with rank Alternate, so PdfCraft is offered under Open With without taking over
+`PDF Avelton.app` from `Info.plist.in` (bundle id `online.avelton.pdf`, macOS 11+, PDF declared
+as a document type with rank Alternate, so PDF Avelton is offered under Open With without taking over
 from Preview). Files opened from Finder arrive as Apple events, which
 `apps/pdfcraft/src/apple_events.rs` receives.
 
@@ -91,7 +91,7 @@ from Preview). Files opened from Finder arrive as Apple events, which
   stapled, and the result is checked with `codesign --verify`, `stapler validate` and `spctl`. The
   app ships on a drag-to-Applications DMG, which is signed and notarized too.
   Its Finder window (background, icon size and positions) comes from
-  [`packaging/macos/dmg/`](../packaging/macos/dmg/README.md), and its volume is named `PdfCraft`
+  [`packaging/macos/dmg/`](../packaging/macos/dmg/README.md), and its volume is named `PDF Avelton`
   without the version, which the window's background needs; the DMG file name keeps the version.
 - **CLI:** `pdfcraft-cli` is signed and notarized as a zip. A bare executable can't hold a stapled
   ticket, so Gatekeeper looks it up online the first time a downloaded copy runs.
@@ -156,9 +156,9 @@ downloading only the changed blocks. `latest` is the newest published, non-pre-r
 otherwise; the release job checks both.
 
 **Flatpak:** the `flatpak` job turns each arch's tarball into a single-file bundle with
-`packaging/linux/flatpak-bundle.sh` and `flatpak/ai.storyteller.pdfcraft.bundle.yml` (no Rust build;
+`packaging/linux/flatpak-bundle.sh` and `flatpak/online.avelton.pdf.bundle.yml` (no Rust build;
 the same binaries), then installs it and runs `pdfcraft-cli --version` in the sandbox.
-`flatpak/ai.storyteller.pdfcraft.yml` is the from-source manifest for a later Flathub submission;
+`flatpak/online.avelton.pdf.yml` is the from-source manifest for a later Flathub submission;
 packaging-lint keeps the runtime and sandbox permissions (`finish-args`) of the two identical.
 Printing is not available in the Flatpak yet: it runs `lp`, which the freedesktop runtime lacks
 (the job logs a note); it needs the print portal. Users install the bundle with `flatpak install --user pdfcraft-<v>-linux-<arch>.flatpak`; the

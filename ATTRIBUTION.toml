@@ -1,4 +1,4 @@
-# ATTRIBUTION.toml: one entry per asset (AGENTS.md §1). The source of truth for provenance and licences.
+# ATTRIBUTION.toml: one entry per asset (AGENTS.md В§1). The source of truth for provenance and licences.
 # ATTRIBUTION.md is generated from this file: `cargo xtask assets --write`. Checked by `cargo xtask assets` (part of `xtask ci`).
 #
 # [[asset]]    a file in this repository (committed or vendored); `sha256` must match the file.
@@ -7,8 +7,8 @@
 # [[build_input]] an optional build input outside this repository (e.g. craft-fonts via CRAFT_FONTS_DIR);
 #              never committed or downloaded here, its own repository attributes each file.
 #
-# licence: SPDX expression from the allowlist in AGENTS.md §1.2. adobe_data = true marks the closed list of
-# Adobe-authored non-visual technical data allowed by AGENTS.md §1.1.
+# licence: SPDX expression from the allowlist in AGENTS.md В§1.2. adobe_data = true marks the closed list of
+# Adobe-authored non-visual technical data allowed by AGENTS.md В§1.1.
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/zh-hans.tsv"
@@ -19,7 +19,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Simplified Chinese UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "abb6981d86d4df565c72f2741b931052462c6689eb5415b888991f40af1adcb7"
+sha256 = "6ae9b13be3dc4c5c92317ad96eb9e75f0d6ac777dc386bd9901421ec0a6f17cf"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/zh-hant.tsv"
@@ -30,7 +30,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Traditional Chinese UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "9bf3f80e72839e983b9ffb9bc3b44db4e29ebdaf2933852a8a600582b851a3fe"
+sha256 = "eb1b9a917207fe02bfd495730fa19d18e3d0fd4b3e244e68c4ae3aa2fc5fc38a"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/cs.tsv"
@@ -41,18 +41,18 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Czech UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "d59a3fe00045668545ec5643ab3516f38fa004eacdedfe15cdca16a8af40722d"
+sha256 = "44d56fb095ce16be4a6281f83caa7cb00f72d69e2ac23d27662d63830b085a70"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/pt-br.tsv"
 title = "Brazilian Portuguese interface translation catalog"
-author = "André Cardoso (andrecards), PdfCraft contributors"
+author = "AndrГ© Cardoso (andrecards), PdfCraft contributors"
 source = "Clean-room translations of PdfCraft's English UI labels, no proprietary localisation resources: the ~1,826-entry gist posted in issue #288 (https://gist.github.com/andrecards/ac388c25fba17312ce83207f8b7b467e), completed and reviewed by PdfCraft contributors"
 licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Brazilian Portuguese UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "e7bf0d59c35cc0f65139a7fe08e7bb213e79820611e7992392d4af2457759253"
+sha256 = "4e385cb95c59a7bd83f4c7f565721d704198a42dc0e664fd00a343c777bdcb2b"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/es.tsv"
@@ -63,7 +63,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Spanish UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "f0c6fcf6fe391c4e7784b64acfb0c91d53ffbe18d9e7708ad663e2afd29a0760"
+sha256 = "68b5a11ae045a457e838f21a45509d5d6c6e24b10c9bcb0fd19ff18173c1337f"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/fr.tsv"
@@ -74,7 +74,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "French UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "6f6fd18c652127a3e5dbc3a0a7c2d24e2cb47ec79ec58ac4170632e37f1e7b1c"
+sha256 = "57ecf71f48e5409f2277e370fcf923c96e84a104685ac122ea5a82931bdc8558"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/de.tsv"
@@ -85,7 +85,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "German UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "180b624986752af06b173a00899ca38d6ba4965b68ba7d3b8a926cf7e5b942de"
+sha256 = "de7a5be0f032c233a055c1bce1206954b3e5815baf439a8755af0374d793e77e"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/te.tsv"
@@ -96,7 +96,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Telugu UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "5d4fe0c8f680a0ecf72f8d23d4f075e3944f71e2c7594aac8a8e59c6cda29043"
+sha256 = "fcfc29134a5257b7d5c4ac19334ffffe14cf30e47e4d5fc8c05904028c188176"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/it.tsv"
@@ -107,7 +107,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Italian UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "7b7edbe92edea1809710c9b89df05a5618fc1cf581b907521351b06eccd5cf3a"
+sha256 = "05c5fcb734fcd7b69853d3b9b3c4d54bcdd91026088df734b50d1599804e86e3"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/ru.tsv"
@@ -118,7 +118,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Russian UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "362b3c8014cda1fe8c682b75c96bc5f630e8648cb05a431eb1448714cb8bc435"
+sha256 = "0684b510060ad993e9b0c44130cdb89fa015d28cffcda8e58f7f4d11a207c8e6"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/hu.tsv"
@@ -129,7 +129,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Hungarian UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "b3fe50274b3117535bb35e935737206417322deb280a643f59855974931b1d9c"
+sha256 = "cebf4be52412971cd4b1a28b7d32b52529217b2a94e31c97cf206c02cb30dbcc"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/bg.tsv"
@@ -140,7 +140,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Bulgarian UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "002a2ba35999da21d8c2ceb383c38f0bdf0aa43f2fe60015835d2f03bac8d576"
+sha256 = "3a171c6c957320709aeb91c4d0407b82c651bef814353a2f9bf0011bd78bb876"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/ja.tsv"
@@ -151,7 +151,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Japanese UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "b268c077b44635ca346d4a2372bef6eea8c5c891e82df549228e68bf4ec4baa5"
+sha256 = "31851e6a1f7f4e6972c2b7839aa501ce2a94ea7c0e3c0091662a6176e5ac48e7"
 
 [[asset]]
 path = "crates/ui-egui/src/i18n/uk.tsv"
@@ -162,7 +162,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Ukrainian UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "7c043ba0237c3cb7cb0107066722dee309c3265ac8c930d3eadb3a9ac9d4d345"
+sha256 = "867bdf779e0419415eb2a7f0432de3e40f1c32ad0394f9f7cddacd7ff4c558ba"
 
 [[asset]]
 path = "assets/icons/accessibility.svg"
@@ -2356,7 +2356,7 @@ source = "https://github.com/adobe-type-tools/cmap-resources (via hayro-cmap)"
 licence = "BSD-3-Clause"
 kind = "data"
 adobe_data = true
-usage = "Character-code mapping tables required to read CJK PDFs. Non-visual data, allowed by AGENTS.md §1.1"
+usage = "Character-code mapping tables required to read CJK PDFs. Non-visual data, allowed by AGENTS.md В§1.1"
 sha256 = "ddf37af521d904d5646c2fc37b2b7e912dc1b56f0d210190b61f598154758e46"
 
 [[bundled]]
@@ -2369,14 +2369,14 @@ source = "ISO 32000-2 Annex D; Adobe Core14 AFM files (via vendored hayro-interp
 licence = "MIT OR Apache-2.0"
 kind = "data"
 adobe_data = true
-usage = "Glyph widths and encodings for non-embedded standard fonts. Non-visual data, allowed by AGENTS.md §1.1"
+usage = "Glyph widths and encodings for non-embedded standard fonts. Non-visual data, allowed by AGENTS.md В§1.1"
 sha256 = "2ec9e608573eda459de1e1d9bda3bb494315e36bee885acc88912a11fe0caa41"
 
 [[fetched]]
 file = "PlayfairDisplay[wght].ttf"
 url = "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/playfairdisplay/PlayfairDisplay%5Bwght%5D.ttf"
 title = "Playfair Display"
-author = "The Playfair Display Project Authors (Claus Eggers Sørensen)"
+author = "The Playfair Display Project Authors (Claus Eggers SГёrensen)"
 source = "https://github.com/google/fonts/tree/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/playfairdisplay"
 licence = "OFL-1.1"
 licence_url = "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/playfairdisplay/OFL.txt"
@@ -2389,7 +2389,7 @@ sha256 = "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6"
 file = "PlayfairDisplay-Italic[wght].ttf"
 url = "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/playfairdisplay/PlayfairDisplay-Italic%5Bwght%5D.ttf"
 title = "Playfair Display Italic"
-author = "The Playfair Display Project Authors (Claus Eggers Sørensen)"
+author = "The Playfair Display Project Authors (Claus Eggers SГёrensen)"
 source = "https://github.com/google/fonts/tree/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/playfairdisplay"
 licence = "OFL-1.1"
 licence_url = "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/playfairdisplay/OFL.txt"
@@ -2631,248 +2631,6 @@ licence_sha256 = "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c
 kind = "font"
 usage = "Showcase PDF (cargo xtask demo-pdf)"
 sha256 = "acd98e64795781b2058f07b18475e0ecee2a0fe2b42a49e2f9e37d0d6bf66ce6"
-
-[[asset]]
-path = "docs/brand/artcraft-logo-white.png"
-title = "ArtCraft brand: artcraft-logo-white"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "8b86aeb06a12a90ba77a60e0d90329272310e244ee5c1f9b161b391280ca79d8"
-
-[[asset]]
-path = "docs/brand/artcraft-logo-white.svg"
-title = "ArtCraft brand: artcraft-logo-white"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "a3e03dc49f9ad4225b8517d5424309c8d1c864d3996d862190d9cc797d5af427"
-
-[[asset]]
-path = "docs/brand/artcraft-logo.png"
-title = "ArtCraft brand: artcraft-logo"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "08fc6d9d3717e8f13417bac6f9025b50e11d1e0b32e9e000883d2fe0c4a0c67b"
-
-[[asset]]
-path = "docs/brand/artcraft-logo.svg"
-title = "ArtCraft brand: artcraft-logo"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "3188971e1affdf4f6be4fa65f715376a7a305e6aa741ec78b0296c8f934eff08"
-
-[[asset]]
-path = "docs/brand/artcraft-mark-black.png"
-title = "ArtCraft brand: artcraft-mark-black"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "5954cc0306e1b9d7beb47097e2e842157113a39d9aba078b57304902687936a9"
-
-[[asset]]
-path = "docs/brand/artcraft-mark-black.svg"
-title = "ArtCraft brand: artcraft-mark-black"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "570adcb4f7ba8ca0647f97074476bab81d3272988f1cdee52efa21bf026036a4"
-
-[[asset]]
-path = "docs/brand/artcraft-mark.png"
-title = "ArtCraft brand: artcraft-mark"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "9d372157a949c147318561e629b11561c28b7cbc14c84b516a3fe6e84d8fbbad"
-
-[[asset]]
-path = "docs/brand/artcraft-mark.svg"
-title = "ArtCraft brand: artcraft-mark"
-author = "ArtCraft Team"
-source = "ArtCraft Team brand assets (provided by the project owner, 2026-10-01; identical copies in storytold/photocraft)"
-licence = "LicenseRef-Storyteller-Trademark"
-licence_file = "docs/brand/LICENSE-brand.txt"
-kind = "logo"
-usage = "ArtCraft branding next to the community links (About dialog, Help menu, home screen) and in docs. ArtCraft Team trademark, not open source; may be used only unmodified within PdfCraft; forks and modified versions must remove it."
-sha256 = "f87af81b6fa411da8820eed2bfdcc54c0ee9cd453b4e868c64f56c69db142d0e"
-
-[[asset]]
-path = "assets/app-icon/pdfcraft.svg"
-title = "PdfCraft app icon (master vector)"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Master artwork; every other app-icon file is rendered from it (packaging/icons.sh)"
-sha256 = "52b384a10a2a7fdd3145d9822972cfd568ef0cb7312549bd4399addd89d45a6d"
-
-[[asset]]
-path = "assets/app-icon/pdfcraft-small.svg"
-title = "PdfCraft app icon (light vector)"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "README header and assets/app-icon/README.md"
-sha256 = "b036304c11ef5dcad36636d06ca0bf331b51e47650d25d3c916a0e1eabf544c7"
-
-[[asset]]
-path = "assets/app-icon/pdfcraft-1024.png"
-title = "PdfCraft app icon, 1024 px on Apple's icon grid"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Runtime window/Dock icon on macOS (apps/pdfcraft/src/main.rs)"
-sha256 = "da577d3f21fbcf5c739067787a9e683be2b064d76813b5d5fec9074a7a106538"
-
-[[asset]]
-path = "assets/app-icon/pdfcraft.icns"
-title = "PdfCraft app icon (macOS .icns)"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "macOS app bundle icon"
-sha256 = "2425148222873de241d267aba667a8b234ecdd0149f2ca8bb6e79443b743b1e8"
-
-[[asset]]
-path = "assets/app-icon/pdfcraft.ico"
-title = "PdfCraft app icon (Windows .ico, 16-256 px)"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Embedded in pdfcraft.exe by apps/pdfcraft/build.rs (Explorer, taskbar, Start menu, Alt-Tab)"
-sha256 = "56daaaae9ae5389794909570885809adf5e1d9183bef2d9669ed2f9bba3ed6f5"
-
-[[asset]]
-path = "assets/app-icon/hicolor/16x16/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 16 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "9b77095cbe75dcba6b74a1fdcd4064812850efaf7a12edebefc9ded5eabb49da"
-
-[[asset]]
-path = "assets/app-icon/hicolor/24x24/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 24 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "a4cd466687f6c5cb59eef3fc564bdba1c8f0d9e324754eeebab82f18823efae7"
-
-[[asset]]
-path = "assets/app-icon/hicolor/32x32/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 32 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "e22279013a5ed5c02571e1e4e9bc4cef9aa0847fcb733a285b2916fabd16bf78"
-
-[[asset]]
-path = "assets/app-icon/hicolor/48x48/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 48 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "55daf2d5575f6c4e4c4975c9f1c74231178f1801963a8b19f68dfa9bc50cb22f"
-
-[[asset]]
-path = "assets/app-icon/hicolor/64x64/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 64 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "2975c200f341e247b5fa18f568fb27d390e3fa01e9b2ad37acb48d0e1cc8a124"
-
-[[asset]]
-path = "assets/app-icon/hicolor/128x128/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 128 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "6ef927ca252b40bc9b5d8843d84137334362f8aa1acbb1bf8c15a02affd25b2b"
-
-[[asset]]
-path = "assets/app-icon/hicolor/256x256/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 256 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop); runtime window icon on Windows and Linux (apps/pdfcraft/src/main.rs)"
-sha256 = "cde7ee8c5ee38f9fc40a429fd9e6d99a035bcd321701fce331bb13bac126614d"
-
-[[asset]]
-path = "assets/app-icon/hicolor/512x512/apps/ai.storyteller.pdfcraft.png"
-title = "PdfCraft app icon, 512 px"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "5ede733e93b96f4eb8d94299232cf2f9605fa19b0d913f95fe9828c316a2d066"
-
-[[asset]]
-path = "assets/app-icon/hicolor/scalable/apps/ai.storyteller.pdfcraft.svg"
-title = "PdfCraft app icon (Linux scalable)"
-author = "PdfCraft contributors (drawn by the project owner in ArtCraft; vectorised with craftrules vectorize_tile.py)"
-source = "Contributor-original (see assets/app-icon/README.md)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "icon"
-usage = "Linux hicolor theme icon (packaging/linux/ai.storyteller.pdfcraft.desktop)"
-sha256 = "52b384a10a2a7fdd3145d9822972cfd568ef0cb7312549bd4399addd89d45a6d"
 
 [[asset]]
 path = "docs/images/pdfcraft-bookmarks.png"
@@ -3160,29 +2918,6 @@ kind = "font"
 usage = "Fill & Sign typed signatures and initials: the typed name's glyph outlines, drawn as filled paths (the font file itself is not embedded in PDFs)"
 sha256 = "21808625578fe8d8cd10cb684be546dca077b27cd03a53a2f1ec11dc743c924c"
 
-[[asset]]
-path = "packaging/macos/dmg/background.svg"
-title = "PdfCraft macOS DMG window background"
-author = "@XusBadia"
-source = "Original work for this repository, derived from the PdfCraft app icon (assets/app-icon/pdfcraft.svg, referenced via an SVG image element, not copied)"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "image"
-usage = "Finder window of the macOS DMG; rendered to background.tiff by packaging/macos/dmg/generate.py"
-sha256 = "e8b9ea9d5e64b7b741c977543c1693825e77d5c4c579eeb674bf5dcd3764cd8a"
-
-
-[[asset]]
-path = "packaging/macos/dmg/background.tiff"
-title = "PdfCraft macOS DMG window background (rendered)"
-author = "@XusBadia"
-source = "Rendered from packaging/macos/dmg/background.svg by packaging/macos/dmg/generate.py"
-licence = "MIT OR Apache-2.0"
-licence_file = "assets/app-icon/LICENSE.txt"
-kind = "image"
-usage = "1x + 2x HiDPI 16-colour palette TIFF copied into the macOS DMG by packaging/macos/package.sh; includes the app icon and the free LittleCMS built-in sRGB profile"
-sha256 = "f46881724a6621f3686a612a79dbdce4f7dbe9e2025610e44c9a094341334c2c"
-
 [[fetched]]
 file = "text-detection.rten"
 url = "https://ocrs-models.s3-accelerate.amazonaws.com/text-detection.rten"
@@ -3230,3 +2965,266 @@ licence_file = "LICENSE-MIT"
 kind = "document"
 usage = "Signature validation tests (crates/sign/tests/pdf.rs): the legacy adbe.x509.rsa_sha1 format"
 sha256 = "b77bfb21166f4bd043597e45a1ea28b9d9f4ba6df0142b3a0fc8b7f8e0fc111b"
+[[asset]]
+path = "assets/app-icon/hicolor/128x128/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "e56c66dac850b37a5088368cc51e99b67c08b69e6bf097823fb38eaafc29085e"
+
+[[asset]]
+path = "assets/app-icon/hicolor/16x16/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "325a0868e860cc46b601c59208adafda9de461821062c26f4f2a008c4601458c"
+
+[[asset]]
+path = "assets/app-icon/hicolor/24x24/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "77e7b2472d7e9e9c6dc6b80c22fa92640e20ef535aed2f8b257d005de0961071"
+
+[[asset]]
+path = "assets/app-icon/hicolor/256x256/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "93a4d77fff70bb44dfed6058ba64d0948af83b0d8a89aaa35ab7a8c37e612754"
+
+[[asset]]
+path = "assets/app-icon/hicolor/32x32/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "9da833e1ba4f7636638658988b9d61b8936c736ca0d68918a8009a6cbdfb457e"
+
+[[asset]]
+path = "assets/app-icon/hicolor/48x48/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "157aa3d97d6adad2f2f403d6ec48fd39693813f32ea6d876b6774321eebb1c09"
+
+[[asset]]
+path = "assets/app-icon/hicolor/512x512/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "14e8e12af4a6c10d6d3ab148eab7acc527dc22dfd33725ca53c0963b97688e36"
+
+[[asset]]
+path = "assets/app-icon/hicolor/64x64/apps/online.avelton.pdf.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "98ef7b97bf13db518074dd1d6aca510573e84dc0da154cbffb48744ebd7a4d80"
+
+[[asset]]
+path = "assets/app-icon/hicolor/scalable/apps/online.avelton.pdf.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "191d860b2832e75ec0d3624ae5c19e3bdff83ff68b70c70b640a6077cb48cb41"
+
+[[asset]]
+path = "assets/app-icon/pdfcraft-1024.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "622af3a1549187d5e955068df3eb01e6c5d312942cf2c843e580e103a56ad829"
+
+[[asset]]
+path = "assets/app-icon/pdfcraft-small.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "191d860b2832e75ec0d3624ae5c19e3bdff83ff68b70c70b640a6077cb48cb41"
+
+[[asset]]
+path = "assets/app-icon/pdfcraft.icns"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "43789a2aa59dd34af86af90d31b2678fc375f5122ecd281b1353a6fd13269346"
+
+[[asset]]
+path = "assets/app-icon/pdfcraft.ico"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "bece7e931dd7d04c277efed5a7d0076ec12fda2ae77d4eb09abaa9b7269bd132"
+
+[[asset]]
+path = "assets/app-icon/pdfcraft.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "8520f7530c8e99f2cf6da0543cf736cb3376cb8cc838d1c811146f084457d2d0"
+
+[[asset]]
+path = "docs/brand/avelton-logo-white.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "76e64b3afd48b71b164095c39436860ca3f6e2e04c42822eff5271fe6a65cb51"
+
+[[asset]]
+path = "docs/brand/avelton-logo-white.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "851eac206e98edcf87fd7936af588ef73de0e8d3ddb265614d78a07d258c3e67"
+
+[[asset]]
+path = "docs/brand/avelton-logo.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "e70eaf8f068b2651018819c24e43a9f2fd044ee57b03046f8b7e05aa796a022e"
+
+[[asset]]
+path = "docs/brand/avelton-logo.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "54f834ef5453e8d1c7c21b77258b8c963e5e8470a74ac740970281e7c3e438b5"
+
+[[asset]]
+path = "docs/brand/avelton-mark-black.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "4974bfb552ef54945d627960a473e24c75cea7222cf5a49c4ad09997c0c1b19b"
+
+[[asset]]
+path = "docs/brand/avelton-mark-black.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "5436976951f2b25d16e2263ee5a25879cc10d83b88d099e827bb0e7c1858df06"
+
+[[asset]]
+path = "docs/brand/avelton-mark.png"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "c6d16b8cc5cd9ffef522a1b027f49f73bde2c746cb250c8d4500fadfdd82829b"
+
+[[asset]]
+path = "docs/brand/avelton-mark.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "246f600b11b960fce4de67ba805b0005732ae14b07f3e29bf82d562a0bb5611b"
+
+[[asset]]
+path = "packaging/macos/dmg/background.svg"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "d797a633a765d9f1116ba954f6fa7eff1d21cbfcc7bbc60f2f6ef0db57cdd34b"
+
+[[asset]]
+path = "packaging/macos/dmg/background.tiff"
+title = "Avelton geometric identity"
+author = "Avelton contributors"
+source = "https://github.com/avelton-ai/avelton-infrastructure/blob/main/scripts/creative/rebrand.py; Inter outlines from bundled OFL-1.1 font"
+licence = "MIT OR Apache-2.0"
+licence_file = "LICENSE-MIT"
+kind = "image"
+usage = "Application and distribution branding"
+sha256 = "82ff1e0de6e0ca605cdff45774b03fb515110a09126bb98efd7862774c00345f"

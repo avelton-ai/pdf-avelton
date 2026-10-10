@@ -1,4 +1,4 @@
-//! `pdfcraft-cli run --root`: a script's image output stays inside the root (#137).
+//! `pdf-avelton-cli run --root`: a script's image output stays inside the root (#137).
 
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
@@ -7,7 +7,7 @@ const PNG: &[u8] = b"\x89PNG\r\n\x1a\n";
 
 /// `root/` next to `outside/` (holding `existing.txt`) in a fresh temporary directory.
 fn sandbox(test: &str) -> PathBuf {
-    let base = std::env::temp_dir().join(format!("pdfcraft-cli-{test}-{}", std::process::id()));
+    let base = std::env::temp_dir().join(format!("pdf-avelton-cli-{test}-{}", std::process::id()));
     let _ = std::fs::remove_dir_all(&base);
     std::fs::create_dir_all(base.join("root")).unwrap();
     std::fs::create_dir_all(base.join("outside")).unwrap();

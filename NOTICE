@@ -52,3 +52,10 @@ dependencies change (plan/adr/0002, 0006).
 Vendored (vendor/, patched; see vendor/README.md):
 - hayro 0.7.1 — Apache-2.0 OR MIT, Copyright the hayro authors (licence files kept in vendor/hayro).
 - hayro-interpret 0.7.0 — Apache-2.0 OR MIT, Copyright the hayro authors (LICENSE-APACHE, LICENSE-MIT kept in vendor/hayro-interpret).
+
+Avelton distribution
+Based on PdfCraft, https://github.com/storytold/pdfcraft, commit 68e91d4815ed43212895589411aa3d21b2a84bc3.
+Original source copyrights and licences above are retained.
+Original Avelton geometric artwork: copyright 2026 Avelton contributors, MIT OR Apache-2.0.
+Inter lettering: OFL-1.1, see the bundled Inter font licence.
+Avelton is independently maintained; no endorsement by the upstream authors is implied.

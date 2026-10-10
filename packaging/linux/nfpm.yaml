@@ -3,7 +3,7 @@
 # exports VERSION and NFPM_ARCH.
 #
 #   nfpm package -f packaging/linux/nfpm.yaml -p deb -t dist/release/
-name: pdfcraft
+name: pdf-avelton
 arch: ${NFPM_ARCH}
 platform: linux
 version: ${VERSION}
@@ -13,8 +13,8 @@ release: 1
 section: graphics
 priority: optional
 maintainer: ${PDFCRAFT_MAINTAINER}
-vendor: Learning Machines LLC
-homepage: https://getartcraft.com/apps/pdfcraft
+vendor: Avelton
+homepage: https://pdf.avelton.online
 license: MIT OR Apache-2.0
 description: |-
   Open-source, native PDF workbench: read, comment, fill and sign forms,
@@ -58,11 +58,11 @@ overrides:
       - xdg-desktop-portal
 
 contents:
-  - src: ${STAGE}/usr/bin/pdfcraft
-    dst: /usr/bin/pdfcraft
+  - src: ${STAGE}/usr/bin/pdf-avelton
+    dst: /usr/bin/pdf-avelton
     file_info: { mode: 0755 }
-  - src: ${STAGE}/usr/bin/pdfcraft-cli
-    dst: /usr/bin/pdfcraft-cli
+  - src: ${STAGE}/usr/bin/pdf-avelton-cli
+    dst: /usr/bin/pdf-avelton-cli
     file_info: { mode: 0755 }
   - src: ${STAGE}/usr/share/
     dst: /usr/share/

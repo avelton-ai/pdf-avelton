@@ -1,4 +1,4 @@
-# PdfCraft parity checklist vs Acrobat Pro (offline feature set). Generated from plan docs; maintained by hand.
+# PDF Avelton parity checklist vs Acrobat Pro (offline feature set). Generated from plan docs; maintained by hand.
 # Validated and reported by `cargo xtask parity`. Schema: see the [schema] table.
 # Status rules: `shipped` = usable today with at least one cited test; `partial` = part exists (notes say what is
 # missing); `planned` = not started; `na` = Adobe-cloud-only (notes name the local or pluggable alternative).
@@ -671,7 +671,7 @@ status = "shipped"
 commands = []
 tools = []
 evidence = ["crates/ui-egui/tests/editing.rs::the_last_session_reopens_its_files_pages_and_active_tab", "crates/ui-egui/tests/editing.rs::quitting_with_unsaved_changes_still_remembers_every_file", "crates/ui-egui/tests/editing.rs::the_last_session_is_off_by_default_and_skips_missing_and_duplicate_files", "crates/ui-egui/src/last_session.rs::malformed_sessions_are_skipped_and_capped"]
-notes = "Desktop, off by default (Preferences ▸ Documents and view, #442): the files open when PdfCraft last closed reopen at the page each showed, with the same tab in front; files named on the command line open after them, in front; files that are gone, and documents the Recovery dialog offers, are skipped. Quitting with unsaved changes still remembers every tab. Not yet: zoom, layout and scroll position within the page (#418); only the first encrypted file asks for its password (later ones stay closed), and a file opened after it dismisses that prompt; a save that fails partway through a quit can leave the remembered list from that quit; never-saved documents and the web build have no paths to reopen."
+notes = "Desktop, off by default (Preferences ▸ Documents and view, #442): the files open when PDF Avelton last closed reopen at the page each showed, with the same tab in front; files named on the command line open after them, in front; files that are gone, and documents the Recovery dialog offers, are skipped. Quitting with unsaved changes still remembers every tab. Not yet: zoom, layout and scroll position within the page (#418); only the first encrypted file asks for its password (later ones stay closed), and a file opened after it dismisses that prompt; a save that fails partway through a quit can leave the remembered list from that quit; never-saved documents and the web build have no paths to reopen."
 
 [[feature]]
 id = "core.usage-rights-preserve"
@@ -2335,7 +2335,7 @@ status = "shipped"
 commands = ["edit.header_footer.update", "edit.header_footer.remove"]
 tools = ["doc_header_footer", "doc_remove_marks"]
 evidence = ["crates/edit/src/tests.rs::replace_and_remove_restore_the_original_content", "crates/ui-egui/tests/marks.rs::header_and_footer_dialog_inserts_tokens_and_applies_to_a_subset"]
-notes = "recognises PdfCraft marks; Acrobat-made headers are not detected yet"
+notes = "recognises PDF Avelton marks; Acrobat-made headers are not detected yet"
 
 [[feature]]
 id = "edit.header-footer-tokens"
@@ -3483,7 +3483,7 @@ status = "partial"
 commands = []
 tools = ["comment_add"]
 evidence = ["crates/annot/src/tests.rs::every_tool_creates_a_drawable_comment", "crates/engine/src/tests.rs::highlight_multiplies_over_text", "crates/annot/src/tests.rs::polygons_clouds_connected_lines_callouts_and_carets_are_drawn"]
-notes = "appearances for every type PdfCraft creates (highlight multiplies; clouds, callouts, stamps, polygons, carets); rich text not yet"
+notes = "appearances for every type PDF Avelton creates (highlight multiplies; clouds, callouts, stamps, polygons, carets); rich text not yet"
 
 [[feature]]
 id = "comment.sticky-note"
@@ -3999,7 +3999,7 @@ status = "shipped"
 commands = ["comment.stamp"]
 tools = ["comment_add"]
 evidence = ["crates/annot/src/tests.rs::stamps_draw_their_label_and_by_line", "crates/ui-egui/tests/stamps.rs::choosing_and_placing_stamps", "crates/automation/tests/automation.rs::stamps_through_tools"]
-notes = "12 standard business stamps in PdfCraft's own design; ISO 32000 stamp names where defined"
+notes = "12 standard business stamps in PDF Avelton's own design; ISO 32000 stamp names where defined"
 
 [[feature]]
 id = "comment.stamps-sign-here"
@@ -4302,9 +4302,7 @@ milestone = "M3"
 status = "shipped"
 commands = ["form.fields"]
 tools = ["doc_info"]
-evidence = ["crates/ui-egui/tests/view.rs::field_list_jumps_to_a_fields_page", "crates/render/src/inspect.rs::fields_listed_only_on_the_pages_are_listed"]
-notes = "read-only list with jump-to-field; filling and editing are separate features (M6); fields a file lists only as page widgets (empty /Fields) are adopted too"
-evidence = ["crates/ui-egui/tests/view.rs::field_list_jumps_to_a_fields_page", "crates/ui-egui/tests/bulk_fields.rs::fields_panel_selects_multiple_fields_and_opens_their_shared_properties", "crates/ui-egui/tests/bulk_fields.rs::double_clicking_a_field_in_the_panel_opens_its_individual_properties"]
+evidence = ["crates/ui-egui/tests/view.rs::field_list_jumps_to_a_fields_page", "crates/render/src/inspect.rs::fields_listed_only_on_the_pages_are_listed", "crates/ui-egui/tests/bulk_fields.rs::fields_panel_selects_multiple_fields_and_opens_their_shared_properties", "crates/ui-egui/tests/bulk_fields.rs::double_clicking_a_field_in_the_panel_opens_its_individual_properties"]
 notes = "list with jump-to-field; in Prepare a form, Shift/Ctrl/Command-click selects several fields and Properties edits their shared properties; double-click opens field properties"
 
 [[feature]]
@@ -5205,7 +5203,7 @@ status = "shipped"
 commands = ["sign.fill.check", "sign.fill.cross", "sign.fill.dot", "sign.fill.line"]
 tools = ["fill_sign_add"]
 evidence = ["crates/ui-egui/tests/fill_sign.rs::text_marks_and_date", "crates/annot/src/tests.rs::fill_and_sign_items_are_drawn"]
-notes = "PdfCraft-drawn stamps"
+notes = "PDF Avelton-drawn stamps"
 
 [[feature]]
 id = "form.fill-sign-date"
@@ -5969,7 +5967,7 @@ status = "shipped"
 commands = ["sign.digital"]
 tools = ["sign_document"]
 evidence = ["crates/sign/tests/crypto.rs::signatures_round_trip_for_every_key_type", "crates/sign/tests/crypto.rs::rsa_signatures_are_read_with_every_digestinfo_variant", "crates/sign/tests/crypto.rs::ecdsa_signatures_are_read_as_der_non_minimal_der_or_raw", "crates/sign/tests/crypto.rs::verifies_ecdsa_on_p521_and_the_brainpool_curves", "crates/sign/tests/crypto.rs::keys_of_unknown_algorithms_are_unsupported_not_wrong", "crates/sign/tests/crypto.rs::tolerated_encodings_are_noted_and_standard_ones_are_not", "crates/sign/tests/crypto.rs::weak_digests_say_so_in_words_that_are_pinned", "crates/sign/tests/crypto.rs::an_rsa_signature_value_not_below_the_modulus_is_refused", "crates/sign/tests/crypto.rs::hostile_rsa_signature_values_are_wrong_not_crashes", "crates/sign/tests/algorithms.rs::rsa_with_sha3_sha512_256_and_ripemd160", "crates/sign/tests/algorithms.rs::rsa_pss_with_its_declared_parameters", "crates/sign/tests/algorithms.rs::ed25519_signs_the_signed_attributes_themselves", "crates/sign/tests/algorithms.rs::ecdsa_on_brainpool_p512r1", "crates/sign/tests/algorithms.rs::brainpool_p512r1_keys_must_have_coordinates_reduced_modulo_p", "crates/sign/tests/algorithms.rs::only_weak_digests_leave_a_note_when_a_signature_validates", "crates/sign/tests/pdf.rs::validates_the_legacy_adbe_x509_rsa_sha1_format"]
-notes = "SHA-256, SHA-384 for P-384; SHA-1 refused for new signatures, validated in old ones. Validation also reads SHA-224, SHA-512/224, SHA-512/256, SHA3-224/256/384/512, RIPEMD-160, RSA PKCS#1 with or without the DigestInfo NULL (a bare digest without any DigestInfo is refused), RSA-PSS with its declared MGF1 hash and salt length, ECDSA as DER/non-minimal DER/raw r||s on P-256, P-384, P-521 and brainpoolP256r1/P384r1/P512r1 (the last hand-written on crypto-bigint, checked against OpenSSL), Ed25519 (RFC 8419), and the legacy adbe.x509.rsa_sha1 format. An RSA value not below the modulus is refused (RFC 8017 5.2.2). SHA-1 and RIPEMD-160 validate but the signature details say the algorithm is weak (wording pinned by tests); tolerated encodings are listed in the details. An algorithm PdfCraft cannot check gives Unknown, not Invalid. Still missing: Ed448/SHAKE, DSA, brainpool curves other than P256/P384/P512, signing with the new digests"
+notes = "SHA-256, SHA-384 for P-384; SHA-1 refused for new signatures, validated in old ones. Validation also reads SHA-224, SHA-512/224, SHA-512/256, SHA3-224/256/384/512, RIPEMD-160, RSA PKCS#1 with or without the DigestInfo NULL (a bare digest without any DigestInfo is refused), RSA-PSS with its declared MGF1 hash and salt length, ECDSA as DER/non-minimal DER/raw r||s on P-256, P-384, P-521 and brainpoolP256r1/P384r1/P512r1 (the last hand-written on crypto-bigint, checked against OpenSSL), Ed25519 (RFC 8419), and the legacy adbe.x509.rsa_sha1 format. An RSA value not below the modulus is refused (RFC 8017 5.2.2). SHA-1 and RIPEMD-160 validate but the signature details say the algorithm is weak (wording pinned by tests); tolerated encodings are listed in the details. An algorithm PDF Avelton cannot check gives Unknown, not Invalid. Still missing: Ed448/SHAKE, DSA, brainpool curves other than P256/P384/P512, signing with the new digests"
 
 [[feature]]
 id = "sign.certify"

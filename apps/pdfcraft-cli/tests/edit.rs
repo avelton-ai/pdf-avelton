@@ -30,12 +30,12 @@ fn fixture() -> Vec<u8> {
 }
 
 fn tmp(test: &str, name: &str) -> PathBuf {
-    let d = std::env::temp_dir().join(format!("pdfcraft-cli-edit-{test}-{}", std::process::id()));
+    let d = std::env::temp_dir().join(format!("pdf-avelton-cli-edit-{test}-{}", std::process::id()));
     std::fs::create_dir_all(&d).unwrap();
     d.join(name)
 }
 
-/// The page rotation `pdfcraft-cli info` reports for the first page, via the inspector.
+/// The page rotation `pdf-avelton-cli info` reports for the first page, via the inspector.
 fn first_page_rotation(path: &std::path::Path) -> u16 {
     let bytes = std::sync::Arc::new(std::fs::read(path).unwrap());
     pdfcraft_render::inspect(bytes, None).unwrap().pages[0].rotation
@@ -102,7 +102,7 @@ mod one_based_arguments {
             static NEXT: AtomicU64 = AtomicU64::new(0);
             for _ in 0..128 {
                 let path =
-                    std::env::temp_dir().join(format!("pdfcraft-cli-one-based-{}-{}", std::process::id(), NEXT.fetch_add(1, Ordering::Relaxed)));
+                    std::env::temp_dir().join(format!("pdf-avelton-cli-one-based-{}-{}", std::process::id(), NEXT.fetch_add(1, Ordering::Relaxed)));
                 match std::fs::create_dir(&path) {
                     Ok(()) => return Self(path),
                     Err(e) if e.kind() == std::io::ErrorKind::AlreadyExists => continue,
@@ -133,7 +133,7 @@ mod one_based_arguments {
                 ] {
                     let out = Command::new(BIN).current_dir(&dir.0).args([command, input, "--out", destination, option, value]).output().unwrap();
                     assert_eq!(out.status.code(), Some(1), "{command} {input} {option} {value}");
-                    assert_eq!(out.stderr, format!("pdfcraft-cli: {diagnostic}\n").as_bytes());
+                    assert_eq!(out.stderr, format!("pdf-avelton-cli: {diagnostic}\n").as_bytes());
                     assert!(out.stdout.is_empty());
                     assert_eq!(std::fs::read(dir.0.join("input.pdf")).unwrap(), source);
                     assert_eq!(std::fs::read(dir.0.join("output.pam")).unwrap(), b"keep destination");

@@ -294,7 +294,7 @@ pub enum PublicKey {
     BrainpoolP512(Vec<u8>),
     /// The 32-byte public key (RFC 8032). Signs the message itself, see [`Scheme::Ed25519`].
     Ed25519(Vec<u8>),
-    /// A key algorithm or curve PdfCraft can't check signatures with. The certificate still
+    /// A key algorithm or curve PDF Avelton can't check signatures with. The certificate still
     /// parses (so its name and dates show); verifying with it gives [`SignError::Unsupported`].
     Unsupported {
         what: String,
@@ -499,7 +499,7 @@ enum Inner {
     External(std::sync::Arc<dyn ExternalKey>),
 }
 
-/// A private key PdfCraft can't read, only ask to sign (OS key stores, tokens).
+/// A private key PDF Avelton can't read, only ask to sign (OS key stores, tokens).
 pub trait ExternalKey: Send + Sync {
     /// Sign `msg`, hashing it with `alg` (PKCS #1 v1.5 for RSA, DER-encoded ECDSA).
     fn sign(&self, alg: DigestAlg, msg: &[u8]) -> Result<Vec<u8>, SignError>;
@@ -520,7 +520,7 @@ impl std::fmt::Debug for PrivateKey {
 }
 
 impl PrivateKey {
-    /// A key held outside PdfCraft's memory (its public half is `public`). It can't be
+    /// A key held outside PDF Avelton's memory (its public half is `public`). It can't be
     /// exported to a PKCS #12 file.
     pub fn external(public: PublicKey, key: std::sync::Arc<dyn ExternalKey>) -> PrivateKey {
         PrivateKey { inner: Inner::External(key), public, pkcs8: Vec::new() }

@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=PdfCraft
+Name=PDF Avelton
 GenericName=PDF Editor
 Comment=Read, organize, combine, split and secure PDFs
-Exec=pdfcraft %U
-TryExec=pdfcraft
-Icon=ai.storyteller.pdfcraft
+Exec=pdf-avelton %U
+TryExec=pdf-avelton
+Icon=online.avelton.pdf
 Terminal=false
 StartupNotify=true
 StartupWMClass=pdfcraft
