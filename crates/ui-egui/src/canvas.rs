@@ -3805,10 +3805,13 @@ trailer << /Root 1 0 R >>
         for index in 0..6 {
             app.open_bytes(&format!("synthetic-{index}.pdf"), None, bytes.as_ref().clone()).unwrap();
             let view = app.views.last_mut().unwrap();
-            let request = RenderRequest { tag: THUMB_TAG, ..Default::default() };
-            view.last_queue = vec![request];
-            view.receive_result(&ctx, solid_result(request, 132, 171));
             view.need_thumbnail(0, true);
+            // Match the live request so finishing the frame does not asynchronously replace
+            // the synthetic texture with a differently sized renderer result.
+            let info = &app.session.get(view.id).unwrap().info;
+            let request = view.thumbnail_requests(info, ctx.pixels_per_point())[0];
+            view.last_queue = vec![request];
+            assert_eq!(view.receive_result(&ctx, solid_result(request, 132, 171)), 132 * 171 * 4);
         }
         app.finish_render_frame(&ctx);
         let total: usize = app.views.iter().map(|v| v.thumbs.values().map(|p| texture_bytes(&p.tex)).sum::<usize>()).sum();
