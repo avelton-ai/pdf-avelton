@@ -80,7 +80,7 @@ ECDSA P-256/P-384; the store integration is tested with software-backed keys.
   ECDSA is read as DER, non-minimal DER or raw `r ‖ s`. `adbe.x509.rsa_sha1` is validated. What the
   check tolerated is listed in the signature's details: a DigestInfo without its NULL, an RSA value
   that isn't modulus-length, ECDSA that isn't canonical DER, a SignerInfo whose digest algorithm
-  differs from the one the signature algorithm names. What PdfCraft can't check (an unknown
+  differs from the one the signature algorithm names. What PDF Avelton can't check (an unknown
   algorithm or curve) is *unknown*, never *invalid*.
 - **Weak algorithms still validate, and say so.** SHA-1 and RIPEMD-160 signatures are common in
   documents signed years ago, so they validate (new signatures never use SHA-1), but the signature's

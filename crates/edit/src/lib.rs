@@ -296,8 +296,8 @@ fn add_resources(doc: &mut Document, page: &pdfcraft_model::Page, opacity: Optio
     Ok(())
 }
 
-const WRAP_OPEN: &[u8] = b"q %PdfCraft\n";
-const WRAP_CLOSE: &[u8] = b"Q %PdfCraft\n";
+const WRAP_OPEN: &[u8] = b"q %PDF Avelton\n";
+const WRAP_CLOSE: &[u8] = b"Q %PDF Avelton\n";
 
 #[cfg(test)]
 fn stream_bytes(doc: &Document, o: &Object) -> Option<Vec<u8>> {
